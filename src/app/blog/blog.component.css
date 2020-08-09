@@ -1,0 +1,17 @@
+.post {
+    background-color: white;
+    border-bottom: 1px solid lightblue;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h5 {
+    color: blueviolet;
+}
+
+.gray {
+    color: gray;
+}

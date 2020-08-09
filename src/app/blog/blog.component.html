@@ -1,1 +1,19 @@
-<p>blog works!</p>
+<div class="filtro mb-3">
+    <select (change)="onChange($event)" class="custom-select">
+        <option [value]="categoria" *ngFor=" let categoria of arrCategorias">{{categoria}}</option>
+    </select>
+</div>
+
+<div class="posts">
+    <div class="post p-4" *ngFor="let post of arrPost">
+        <div class="imagen">
+            <img [src]="post.imagen">
+        </div>
+        <div class="contenido">
+            <h3>{{post.titulo}}</h3>
+            <h5>{{post.categoria}}</h5>
+            <p>{{post.texto}}</p>
+            <p class="gray">{{post.autor}} - {{post.fecha}}</p>
+        </div>
+    </div>
+</div>

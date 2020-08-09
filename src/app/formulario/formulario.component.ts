@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-formulario',
+  selector: 'formulario',
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.css']
 })
