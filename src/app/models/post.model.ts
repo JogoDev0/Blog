@@ -4,10 +4,11 @@ export class Post {
     texto: string;
     autor: string;
     imagen: string;
-    fecha: string;
+    fecha: Date;
     categoria: string;
 
-    constructor(pTitulo: string, pTexto: string, pAutor: string, pImagen: string, pFecha: string, pCategoria: string) {
+    constructor(pTitulo: string, pTexto: string, pAutor: string, pImagen: string, pFecha: Date, pCategoria: string) {
+
         this.titulo = pTitulo;
         this.texto = pTexto;
         this.autor = pAutor;
