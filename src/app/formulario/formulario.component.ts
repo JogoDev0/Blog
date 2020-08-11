@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BloggingService } from '../blogging.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Post } from '../models/post.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'formulario',
@@ -12,7 +13,7 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor(private bloggingService: BloggingService) {
+  constructor(private bloggingService: BloggingService, private router: Router) {
 
     this.formulario = new FormGroup({
       titulo: new FormControl('', [
@@ -48,8 +49,13 @@ export class FormularioComponent implements OnInit {
       this.formulario.controls.fecha.value,
       this.formulario.controls.categoria.value.toUpperCase()
     );
-    console.log('onSubmit()', newPost);
+    // console.log('onSubmit()', newPost);
 
     this.bloggingService.agregarPost(newPost);
+
+    setTimeout(() => {
+      this.router.navigate(['/blog']);
+    }, 2000)
+
   }
 }
