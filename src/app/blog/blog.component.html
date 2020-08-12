@@ -4,16 +4,19 @@
     </select>
 </div>
 
-<div class="posts">
-    <div class="post p-4" *ngFor="let post of arrPost">
-        <div class="imagen">
-            <img [src]="post.imagen">
-        </div>
-        <div class="contenido">
-            <h3>{{post.titulo}}</h3>
-            <h5>{{post.categoria}}</h5>
-            <p>{{post.texto}}</p>
-            <p class="gray">{{post.autor}} - {{post.fecha | date}}</p>
+<div class="row ">
+    <div class="col col-12 col-lg-6 mb-3" *ngFor="let post of arrPost; let indice=index"
+        [ngClass]="{'col-lg-12':(indice%3===0)}">
+        <div class="card h-100">
+            <img [src]="post.imagen" class="card-img-top">
+            <div class="card-body">
+                <h4 class="card-title">{{post.titulo}}</h4>
+                <h5>{{post.categoria}}</h5>
+                <p class="card-text">{{post.texto}}</p>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">{{post.autor}} - {{post.fecha | date}}</small>
+            </div>
         </div>
     </div>
 </div>

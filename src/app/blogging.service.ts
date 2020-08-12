@@ -60,7 +60,7 @@ export class BloggingService {
       },
       {
         titulo: 'Guía de compra para disfrutar de las noches estrelladas: 24 telescopios, prismáticos, gadgets, accesorios y más',
-        texto: 'Las cálidas y despejadas noches de verano son la época ideal para iniciarse en la astronomía. Si además tenemos en cuenta la tradicional — pero no por ello menos espectacular — lluvia de estrellas de San Lorenzo, mejor todavía. Si este 2020 quieres disfrutar de las Perseidas al detalle, en esta guía de compra encontrarás una selección de dispositivos, accesorios y gadget para observar al cielo: telescopios, binoculares y mucho más',
+        texto: 'Las cálidas y despejadas noches de verano son la época ideal para iniciarse en la astronomía. Si además tenemos en cuenta la tradicional — pero no por ello menos espectacular — lluvia de estrellas de San Lorenzo, mejor todavía. Si este 2020 quieres disfrutar de las Perseidas al detalle, en esta guía de compra encontrarás una selección de dispositivos, accesorios y gadget para observar al cielo: telescopios, binoculares y mucho más.',
         autor: 'EVA RODRÍGUEZ DE LUIS',
         imagen: 'https://i.blogs.es/0c69af/astrology-astronomy-constellation-2034892/1366_2000.jpg',
         fecha: new Date(2020, 7, 11),
@@ -87,6 +87,46 @@ export class BloggingService {
         texto: 'Un poco por sorpresa, ya que no aparecía en su listado de estrenos previstos para agosto, Netflix ha deslizado entre sus próximos programas para finales de verano la serie documental "High Score". En ella hablará de la edad dorada de los videojuegos: la invención del medio, las primeras recreativas y las generaciones inaugurales de videoconsolas y microordenadores. Su estreno está previsto el próximo 19 de agosto.',
         autor: 'JOHN TONES',
         imagen: 'https://i.blogs.es/22d934/ee5fasdxyaa8mwb/1366_2000.jpg',
+        fecha: new Date(2020, 7, 11),
+        categoria: 'CINE Y TV'
+      },
+      {
+        titulo: 'Kobo Nia, análisis: ideal para quien no quiere gastarse más de 100 euros en un libro electrónico',
+        texto: 'Kobo quiere asaltar de nuevo la gama básica de eReaders con su nuevo Nia. La ventaja clave frente a su competidor directo en Amazon: su precio y la calidad de su pantalla.',
+        autor: 'MIGUEL LÓPEZ',
+        imagen: 'https://i.blogs.es/4291c9/kobo_nia/1024_682.jpg',
+        fecha: new Date(2020, 6, 26),
+        categoria: 'ANÁLISIS'
+      },
+      {
+        titulo: 'Hazte con el nuevo y ligerísimo patinete eléctrico Xiaomi Mi Scooter Essential más barato en eBay: 260 euros con envío gratis',
+        texto: 'Si buscas un patinete eléctrico ligero pero solvente para movilidad urbana, en eBay tienes este sencillo modelo de Xiaomi a precio de derribo.',
+        autor: 'EVA RODRÍGUEZ DE LUIS',
+        imagen: 'https://i.blogs.es/2122cb/essen/500_333.jpg',
+        fecha: new Date(2020, 7, 12),
+        categoria: 'SELECCIÓN'
+      },
+      {
+        titulo: 'Surface Duo: Microsoft anuncia el precio de su móvil plegable y estará disponible a partir de septiembre (en Estados Unidos)',
+        texto: 'Microsoft nos mostró (aunque bien poco) su móvil plegable con Android: el Surface Duo. La vuelta de los de Redmond al territorio smartphone fue por todo lo alto con este teléfono móvil con dos pantallas y Android como sistema operativo, pero hoy por fin han confirmado el precio del Surface Duo.',
+        autor: 'ANNA MARTÍ',
+        imagen: 'https://i.blogs.es/294622/surface-duo-00/1366_2000.jpg',
+        fecha: new Date(2020, 7, 12),
+        categoria: 'MÓVILES'
+      },
+      {
+        titulo: 'Hay un antepasado arcaico sin identificar escondido en el ADN de muchos humanos modernos: tras las huellas genéticas de H. erectus',
+        texto: 'El ADN antiguo es el equivalente genético de un enorme trastero en la que con los siglos y milenios se han ido acumulando cachivaches, cacharros y trastos viejos. Por eso, resulta tan útil rebuscar en él. Así hemos encontrado los restos que en nuestro linaje genético dejaron neandertales o devinsonianos. De hecho, hemos encontrado otra cosa.',
+        autor: 'JAVIER JIMÉNEZ',
+        imagen: 'https://i.blogs.es/ee2130/eugene-zhyvchik-xjy-7gtc38o-unsplash/1366_2000.jpg',
+        fecha: new Date(2020, 7, 11),
+        categoria: 'CIENCIA'
+      },
+      {
+        titulo: 'Disney pisa a fondo la moto de luz de "Tron 3" adjudicándole director y con Jared Leto de protagonista',
+        texto: 'Pese a la confirmación hace unas semanas de que "Tron", la radical y revolucionaria película de ciencia-ficción de Disney, tendría tercera parte, faltaba algo más de sustancia en esa noticia que verificara que, efectivamente, la productora se había puesto manos a la obra. Al fin y al cabo, la entrega previa, "Tron: Legacy", había funcionado estupendamente en taquilla (170 millones de dólares de presupuesto, 400 de recaudación), pero desastres financieros como "Tomorrowland" -y, en menor medida, "Un pliegue en el tiempo"- habían dado al traste con el proyecto.',
+        autor: 'JOHN TONES',
+        imagen: 'https://i.blogs.es/117b77/tron_legacy_sequel-0/1366_2000.jpg',
         fecha: new Date(2020, 7, 11),
         categoria: 'CINE Y TV'
       }
