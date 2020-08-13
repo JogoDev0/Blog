@@ -13,6 +13,10 @@ export class FormularioComponent implements OnInit {
 
   formulario: FormGroup;
 
+  progress: number;
+
+  mostrarProgress: boolean;
+
   constructor(private bloggingService: BloggingService, private router: Router) {
 
     this.formulario = new FormGroup({
@@ -35,6 +39,9 @@ export class FormularioComponent implements OnInit {
         Validators.required
       ]),
     });
+
+    this.progress = 0;
+    this.mostrarProgress = false;
   }
 
   ngOnInit(): void {
@@ -53,9 +60,14 @@ export class FormularioComponent implements OnInit {
 
     this.bloggingService.agregarPost(newPost);
 
+    this.mostrarProgress = true;
+    setInterval(() => {
+      this.progress = this.progress + 5;;
+    }, 10);
+
     setTimeout(() => {
       this.router.navigate(['/blog']);
-    }, 2000)
+    }, 1000);
 
   }
 }

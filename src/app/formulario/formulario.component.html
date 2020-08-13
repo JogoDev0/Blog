@@ -1,27 +1,56 @@
 <form [formGroup]=formulario (ngSubmit)="onSubmit()">
     <div class="form-group">
-        <label for="">Titulo</label>
-        <input type="text" class="form-control" formControlName="titulo">
+        <label for="">Título</label>
+        <input type="text" class="form-control" formControlName="titulo" placeholder="Introduce el título del post">
+        <p class="formError" *ngIf="formulario.controls.titulo.errors && formulario.controls.titulo.touched">
+            El campo Título es requerido.
+        </p>
     </div>
     <div class="form-group">
         <label for="">Texto</label>
-        <textarea class="form-control" cols="30" rows="10" formControlName="texto"></textarea>
+        <textarea class="form-control" cols="30" rows="10" formControlName="texto"
+            placeholder="Introduce el texto del post">
+        </textarea>
+        <p class="formError" *ngIf="formulario.controls.texto.errors && formulario.controls.texto.touched">
+            El campo Texto es requerido.
+        </p>
     </div>
     <div class="form-group">
         <label for="">Autor</label>
-        <input type="text" class="form-control" formControlName="autor">
+        <input type="text" class="form-control" formControlName="autor" placeholder="Introduce el nombre del autor">
+        <p class="formError" *ngIf="formulario.controls.autor.errors && formulario.controls.autor.touched">
+            El campo Autor es requerido.
+        </p>
     </div>
     <div class="form-group">
         <label for="">Imagen</label>
-        <input type="text" class="form-control" formControlName="imagen">
+        <input type="text" class="form-control" formControlName="imagen"
+            placeholder="Introduce la ruta de la imagen que acompaña al post">
+        <p class="formError" *ngIf="formulario.controls.imagen.errors && formulario.controls.imagen.touched">
+            El campo Imagen es requerido.
+        </p>
     </div>
     <div class="form-group">
         <label for="">Fecha</label>
         <input type="date" class="form-control" formControlName="fecha">
+        <p class="formError" *ngIf="formulario.controls.fecha.errors && formulario.controls.fecha.touched">
+            El campo Fecha es requerido.
+        </p>
     </div>
     <div class="form-group">
-        <label for="">Categoria</label>
-        <input type="text" class="form-control" formControlName="categoria">
+        <label for="">Categoría</label>
+        <input type="text" class="form-control" formControlName="categoria"
+            placeholder="Introduce la categoría a la que pertenece el post">
+        <p class="formError" *ngIf="formulario.controls.categoria.errors && formulario.controls.categoria.touched">
+            El campo Categoría es requerido.
+        </p>
     </div>
     <input type="submit" value="Crear post" [disabled]="!formulario.valid" class="btn btn-danger btn-block">
 </form>
+
+
+<div class="progress" *ngIf="mostrarProgress">
+    <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+        aria-valuemax="100" [style.width]="progress + '%'">
+    </div>
+</div>

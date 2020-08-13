@@ -1,9 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;700;900&display=swap');
 body {
-    background-color: lightblue;
+    background-color: mintcream;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
-ul li a {
+.darkturquoise {
+    color: darkturquoise;
+}
+
+ul li a:hover {
     color: white;
 }

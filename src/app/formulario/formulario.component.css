@@ -5,3 +5,8 @@
 .form-control.ng-invalid.ng-touched {
     border: 2px solid crimson;
 }
+
+.formError {
+    color: crimson;
+    font-weight: 900;
+}
