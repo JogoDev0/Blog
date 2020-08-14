@@ -12,7 +12,9 @@
             <div class="card-body">
                 <h4 class="card-title">{{post.titulo}}</h4>
                 <h5>{{post.categoria}}</h5>
-                <p class="card-text">{{post.texto}}</p>
+                <p class="card-text"> {{post.texto | slice:0:200}}...
+                    <a href=""><small class="text-muted"> LEER MÁS</small></a>
+                </p>
             </div>
             <div class="card-footer">
                 <small class="text-muted">{{post.autor}} - {{post.fecha | date}}</small>
