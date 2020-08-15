@@ -1,0 +1,15 @@
+.card {
+    white-space: pre-line;
+}
+
+img {
+    opacity: 0.5;
+}
+
+h5 {
+    color: darkturquoise;
+}
+
+p {
+    font-size: 1.5rem;
+}

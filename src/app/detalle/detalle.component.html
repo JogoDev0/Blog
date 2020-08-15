@@ -1,0 +1,16 @@
+<div class="row ">
+    <div class="col col-12">
+        <div class="card bg-dark text-white">
+            <img [src]="detallePost.imagen" class="card-img-top">
+            <div class="card-body card-img-overlay">
+                <h2 class="card-title">{{detallePost.titulo}}</h2>
+            </div>
+            <div class="card-footer">
+                <h5>{{detallePost.categoria}}</h5>
+                <p class="card-text"> {{detallePost.texto}}...
+                </p>
+                <small>{{detallePost.autor}} - {{detallePost.fecha | date}}</small>
+            </div>
+        </div>
+    </div>
+</div>

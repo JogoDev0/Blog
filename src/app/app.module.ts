@@ -8,13 +8,15 @@ import { FormularioComponent } from './formulario/formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import localeEs from '@angular/common/locales/es';
 import { registerLocaleData } from '@angular/common';
+import { DetalleComponent } from './detalle/detalle.component';
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
     AppComponent,
     BlogComponent,
-    FormularioComponent
+    FormularioComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,

@@ -8,12 +8,14 @@
     <div class="col col-12 col-lg-6 mb-3" *ngFor="let post of arrPost; let indice=index"
         [ngClass]="{'col-lg-12':((indice+1)%3===0)}">
         <div class="card h-100">
-            <img [src]="post.imagen" class="card-img-top">
+            <a [routerLink]="['/detalle', indice ]">
+                <img [src]="post.imagen" class="card-img-top">
+            </a>
             <div class="card-body">
                 <h4 class="card-title">{{post.titulo}}</h4>
                 <h5>{{post.categoria}}</h5>
                 <p class="card-text"> {{post.texto | slice:0:200}}...
-                    <a href=""><small class="text-muted"> LEER MÁS</small></a>
+                    <a [routerLink]="['/detalle', indice ]"><small class="text-muted"> LEER MÁS</small></a>
                 </p>
             </div>
             <div class="card-footer">

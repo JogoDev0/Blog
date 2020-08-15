@@ -158,7 +158,6 @@ export class BloggingService {
     const arrTemp = JSON.parse(localStorage.getItem("posts"));
     arrTemp.push(post);
     localStorage.setItem("posts", JSON.stringify(arrTemp));
-    // this.arrPost.push(post);
   }
 
   getAllPosts(): Promise<Post[]> {
@@ -168,7 +167,6 @@ export class BloggingService {
         localStorage.setItem("posts", JSON.stringify(this.arrPost));
       }
       resolve(JSON.parse(localStorage.getItem("posts")));
-      // resolve(this.arrPost);
       reject('ERROR: No se han podido recuperar los posts');
     });
   }
@@ -178,6 +176,14 @@ export class BloggingService {
       const arrTemp = JSON.parse(localStorage.getItem("posts"));
       resolve(arrTemp.filter(post => post.categoria === cat));
       reject(`ERROR: No se han podido obtener los posts de la categoria ${cat}`);
+    });
+  }
+
+  getPostById(id: number): Promise<Post> {
+    return new Promise((resolve, reject) => {
+      const arrTemp = JSON.parse(localStorage.getItem("posts"));
+      resolve(arrTemp[id]);
+      reject(`ERROR: No se han podido obtener el post con id ${id}`);
     });
   }
 }

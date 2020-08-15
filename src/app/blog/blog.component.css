@@ -6,3 +6,7 @@ img {
 h5 {
     color: darkturquoise;
 }
+
+.card {
+    white-space: pre-line;
+}
