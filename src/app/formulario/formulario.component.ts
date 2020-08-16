@@ -68,7 +68,7 @@ export class FormularioComponent implements OnInit {
 
     this.mostrarProgress = true;
     setInterval(() => {
-      this.progress = this.progress + 5;;
+      this.progress = this.progress + 10;;
     }, 10);
 
     setTimeout(() => {
