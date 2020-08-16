@@ -1,6 +1,7 @@
 img {
     width: 100%;
     display: block;
+    cursor: pointer;
 }
 
 h5 {
@@ -9,4 +10,8 @@ h5 {
 
 .card {
     white-space: pre-line;
+}
+
+a {
+    cursor: pointer;
 }

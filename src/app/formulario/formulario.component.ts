@@ -48,17 +48,23 @@ export class FormularioComponent implements OnInit {
   }
 
   onSubmit() {
-    let newPost = new Post(
-      this.formulario.controls.titulo.value,
-      this.formulario.controls.texto.value,
-      this.formulario.controls.autor.value,
-      this.formulario.controls.imagen.value,
-      this.formulario.controls.fecha.value,
-      this.formulario.controls.categoria.value.toUpperCase()
-    );
-    // console.log('onSubmit()', newPost);
 
-    this.bloggingService.agregarPost(newPost);
+    this.bloggingService.getAllPosts()
+      .then(response => {
+        let arrPost = response;
+        let newPost = new Post(
+          arrPost.length,
+          this.formulario.controls.titulo.value,
+          this.formulario.controls.texto.value,
+          this.formulario.controls.autor.value,
+          this.formulario.controls.imagen.value,
+          this.formulario.controls.fecha.value,
+          this.formulario.controls.categoria.value.toUpperCase()
+        );
+        this.bloggingService.agregarPost(newPost);
+      })
+      .catch(error => console.log(error));
+
 
     this.mostrarProgress = true;
     setInterval(() => {
@@ -68,6 +74,8 @@ export class FormularioComponent implements OnInit {
     setTimeout(() => {
       this.router.navigate(['/blog']);
     }, 1000);
+
+
 
   }
 }

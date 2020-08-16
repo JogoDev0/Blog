@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from '../models/post.model';
 import { BloggingService } from '../blogging.service';
+import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'blog',
@@ -12,7 +14,10 @@ export class BlogComponent implements OnInit {
   arrPost: Post[];
   arrCategorias: string[];
 
-  constructor(private blogginService: BloggingService) {
+  constructor(
+    private blogginService: BloggingService,
+    private viewportScroller: ViewportScroller,
+    private router: Router) {
 
     this.arrPost = [];
     this.arrCategorias = ['TODO'];
@@ -48,6 +53,11 @@ export class BlogComponent implements OnInit {
         console.log(error);
       }
     }
+  }
+
+  onClick(id) {
+    this.viewportScroller.scrollToPosition([0, 0]);
+    this.router.navigate(['/detalle', id]);
   }
 
 }
